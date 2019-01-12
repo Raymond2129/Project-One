@@ -28,10 +28,10 @@ Team Members:
  
  BreakDown of Tasks:
  
- 1. HTML (look and feel)
- 2. CSS
- 3. JavaScript / jQuery
- 4. Indeed API Integration
- 5. Zillow API Integration
- 6. Weather API Integration
- 7. SOCRATA API Integration (City Information)
+ 1. HTML (look and feel) -- Cole H.
+ 2. CSS -- Cole H. 
+ 3. JavaScript / jQuery -- Kate F.
+ 4. Indeed API Integration -- Raymond P.
+ 5. Zillow API Integration -- Cole H.
+ 6. Weather API Integration -- Ashley H.
+ 7. SOCRATA API Integration (City Information) -- Denise A. 
