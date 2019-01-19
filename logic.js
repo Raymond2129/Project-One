@@ -14,6 +14,7 @@ $(document).ready(function() {
       
       var database = firebase.database();
 
+<<<<<<< HEAD
 //Button collects and stores user input      
       $(".submitInput").on("click", function (event) {
 
@@ -38,3 +39,42 @@ $(document).ready(function() {
       "<td id='locationDisplay'>" + childSnapshot.val().location +
     )
     });
+=======
+
+  // WEATHER LOGIC
+var userCity = $("#cityInput").val();
+
+var APIKey = "4215e0176d12264a5f7d201c6130c2f9";
+
+$("#submitButton").on("click", function(event) {
+  event.preventDefault();
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&units=imperial&appid=" + APIKey;
+ 
+ var userCity = $("#cityInput").val();
+ console.log(userCity);
+
+ $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+
+.then(function(response) {
+    console.log(response);
+    console.log(queryURL);
+    $("#temp1").append(response.main.temp);
+    $("#description1").append(response.clouds.all);
+    $("#precip1").append(response.main.humidity);
+    $("#wind1").append(response.wind.speed);
+
+
+});
+}); // END WEATHER LOGIC
+
+
+
+
+
+
+
+    }); // END OF DOCUMENT ON-READY
+>>>>>>> master
