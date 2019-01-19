@@ -2,6 +2,90 @@
 <html lang="en">
 
 <head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Find Me a Job!</title>
+
+</head>
+<body>
+		<nav class="site-header sticky-top py-1">
+				<div class="container d-flex flex-column flex-md-row justify-content-between">
+					<a class="py-2" href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto" focusable="false" role="img"><title>Find Me a Job</title><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+					</a>
+					<a class="py-2 d-none d-md-inline-block" href="index.html">Job Search</a>
+					<!-- <a class="py-2 d-none d-md-inline-block" href="location.html">Location Search</a> -->
+				</div>
+			</nav>
+		<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Find Me a Job!</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Job Search</a></li>
+						<li class="active"><a href="location.html">Location Search</a></li>
+			
+					</ul>
+				</div> 
+			</nav> -->
+	<div class="jumbotron col-md-12" id="header">
+		<h1 class="display-4"><i class="fas fa-dice-d20"></i> Find Me a Job</h1>
+		 </div>
+		 	 <div class="col-md-2"></div>
+		 <div>
+		
+	  <div class="card col-md-9">
+		  <div class="card-header">
+			  <h3>Job Search</h3>
+		  </div>
+	  <div class="card-body">
+
+		  <div class="form-group">
+				<label for="exampleFormControlInput1">Job Title</label>
+				<textarea class="form-control" id="job" placeholder=" " >
+				  </textarea>
+			  </div>
+			  <div class="form-group">
+				<label for="exampleFormControlInput1">Locating (City)</label>
+				<textarea class="form-control" id="city" placeholder=" " >
+				  </textarea>
+			  </div>
+			  <button class="btn btn-primary" id="search" type="submit"><i class="fas fa-search"></i> Search</button>
+			  <button class="btn btn-primary" id="clear" type="submit"><i class="fas fa-trash-alt"></i> Clear Results</button>
+		</div>
+	</div>
+	<div class="card col-md-9 offset-2">
+		<div class="card-header">
+		<h3>Top Search Results</h3>	
+		</div>
+		<div class="card-body">
+			<div class="card col-md-5">
+				<div class="card-header">
+					<h3>Top Jobs</h3>
+				</div>
+				<div class="card-body">
+				<p>Results</p>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+			<div class="card col-md-5">
+			<div class="card-header">
+				<h3>Location and Weather</h3>
+			</div>
+			<div class="card-body">
+				<p>weather</p>
+				<p>city info</p>
+			</div>
+		   </div>
+		   </div>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -43,6 +127,7 @@
 					<label for="entry-input" class="inputLabel">Position Location</label>
 					<input type="text" id="location-input"><br>
 
+
 					<input id="submit" type="submit" value="Submit">
 				</form>
 				<div id="position-view"></div>
@@ -60,6 +145,28 @@
 			</div>
 		</div>
 	</div>	
+
+</div>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  //retrieve search parameters
+//populate queryURL with search parameters
+//add search information to div
+$("#search").click(function(){
+console.log("search");
+});
+$("#clear").click(function(){
+console.log("clear");
+	});
+
+
+  
+  });
+  </script>
+  			  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	<script
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -71,6 +178,7 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	 crossorigin="anonymous"></script>
+
 </body>
 
 </html>
