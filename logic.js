@@ -14,7 +14,7 @@ $(document).ready(function() {
       
       var database = firebase.database();
 
-<<<<<<< HEAD
+
 //Button collects and stores user input      
       $(".submitInput").on("click", function (event) {
 
@@ -39,7 +39,6 @@ $(document).ready(function() {
       "<td id='locationDisplay'>" + childSnapshot.val().location +
     )
     });
-=======
 
   // WEATHER LOGIC
 var userCity = $("#cityInput").val();
@@ -77,4 +76,3 @@ $("#submitButton").on("click", function(event) {
 
 
     }); // END OF DOCUMENT ON-READY
->>>>>>> master
