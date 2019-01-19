@@ -17,15 +17,12 @@ $(document).ready(function() {
 //Button collects and stores user input      
       $(".submitInput").on("click", function (event) {
 
-        var nameInput = $("#nameInput").val().trim();
-
         var jobInput = $("#jobInput").val().trim();
-  
+
         var locationInput = $("#locationInput").val().trim();
 
         	//Creates object for pushing input data
 					database.ref().push({
-						name: nameInput,
 						job: jobInput,
             location: locationInput,
 
@@ -33,14 +30,11 @@ $(document).ready(function() {
             
           //Firebase watcher 
 	database.ref().on("child_added", function (childSnapshot) {
-
-    var name = childSnapshot.val().name;
 		var job = childSnapshot.val().job;
     var location = childSnapshot.val().location;
     
   	$("#boardText").append(
-      "<tr><td id='nameDisplay'>" + childSnapshot.val().name + 
       "<td id='jobDisplay'>" + childSnapshot.val().job + 
       "<td id='locationDisplay'>" + childSnapshot.val().location +
-  
-});
+    )
+    });
