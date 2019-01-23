@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyAtApx4q55Rk5X10_Db7bpzMTQKdlBZq5E",
