@@ -6,8 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">	
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Find Me a Job!</title>
@@ -23,18 +22,7 @@
 					<!-- <a class="py-2 d-none d-md-inline-block" href="location.html">Location Search</a> -->
 				</div>
 			</nav>
-		<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#">Find Me a Job!</a>
-					</div>
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Job Search</a></li>
-						<li class="active"><a href="location.html">Location Search</a></li>
-			
-					</ul>
-				</div> 
-			</nav> -->
+
 	<div class="jumbotron col-md-12" id="header">
 		<h1 class="display-4"><i class="fas fa-dice-d20"></i> Find Me a Job</h1>
 		 </div>
@@ -49,12 +37,12 @@
 
 		  <div class="form-group">
 				<label for="exampleFormControlInput1">Job Title</label>
-				<textarea class="form-control" id="job" placeholder=" " >
+				<textarea class="form-control" id="job-input">
 				  </textarea>
 			  </div>
 			  <div class="form-group">
-				<label for="exampleFormControlInput1">Locating (City)</label>
-				<textarea class="form-control" id="city" placeholder=" " >
+				<label for="exampleFormControlInput1">Location (City)</label>
+				<textarea class="form-control" id="location-input">
 				  </textarea>
 			  </div>
 			  <button class="btn btn-primary" id="search" type="submit"><i class="fas fa-search"></i> Search</button>
@@ -70,8 +58,9 @@
 				<div class="card-header">
 					<h3>Top Jobs</h3>
 				</div>
-				<div class="card-body">
+				<div id="jobPanel">
 				<p>Results</p>
+				<div id="position-view"></div>
 				</div>
 			</div>
 			<div class="col-md-2"></div>
@@ -103,30 +92,18 @@
 		   </div>
 		   </div>
 
-	<meta charset="UTF-8">
+	<!-- <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="style.css">
-	<title>Find Me a Job!</title>
+	<title>Find Me a Job!</title> -->
 
 </head>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Find Me a Job!</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="index.html">Job Search</a></li>
-			<li><a href="location.html">Location Search</a></li>
 
-		</ul>
-	</div>
-</nav>
-
-<body>
+<!-- <body>
 	<div class="col-md-1"></div>
 	<div class="jumbotron col-md-9">
 		<h1 class="display-4"><i class="fas fa-newspaper"></i>Find Me a Job</h1>
@@ -148,23 +125,12 @@
 					<input id="submit" type="submit" value="Submit">
 				</form>
 				<div id="position-view"></div>
-				<!-- <button class="btn btn-primary" id="search" type="submit"><i class="fas fa-search"></i>Search</button>
-			  <button class="btn btn-primary" id="clear" type="reset"><i class="fas fa-trash-alt"></i>Clear Results</button> -->
-				<!-- </div>
-		</div>
-		<div class="card col-md-9 offset-1">
-			<div class="card-header">
-				<h3>Top Articles</h3>
-			</div>
-			<div class="card-body">
-				<div id="results"></div>
-			</div> -->
 			</div>
 		</div>
 	</div>	
 
-</div>
-  <script type="text/javascript">
+</div> -->
+  <!-- <script type="text/javascript">
   $(document).ready(function() {
   //retrieve search parameters
 //populate queryURL with search parameters
@@ -178,13 +144,8 @@ console.log("clear");
 
 
   
-  });
-  </script>
-  			  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-	<script
+  }); -->
+<script
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
