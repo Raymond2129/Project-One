@@ -11,38 +11,35 @@
     <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
     <!--Materialize Link-->
-
+    <link type="text/css" rel="stylesheet" href="assets/materialize/materialize/css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="style.css">
     <title>Find Me a Job!</title>
 
 </head>
 
 <body>
-    <nav class="site-header sticky-top py-1">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto" focusable="false"
-                    role="img">
-                    <title>Find Me a Job</title>
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-                    <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-                    <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-                    <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-                    <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-                    <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-                </svg>
-            </a>
-            <a class="py-2 d-none d-md-inline-block" href="index.html">Job Search</a>
-            <!-- <a class="py-2 d-none d-md-inline-block" href="location.html">Location Search</a> -->
-        </div>
-    </nav>
+        <nav class="light-blue lighten-1" role="navigation">
+                <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><i class="fas fa-dice-d20"></i></a>
+                  <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Refresh search</a></li>
+                  </ul>
+            
+                  <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#">Navbar Link</a></li>
+                  </ul>
+                  <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                </div>
+              </nav>
 
-    <div class="jumbotron col-md-12" id="header">
-        <h1 class="display-4"><i class="fas fa-dice-d20"></i> Find Me a Job</h1>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br>
+            <br>
+            <h1 class="header center blue-text"><i class="fas fa-dice-d20"></i> Find Me a Job</h1>
+            <br>
+            <br>
     </div>
-    <div class="col-md-2"></div>
+        </div>
     <div>
 
         <div class="card col-md-9">
