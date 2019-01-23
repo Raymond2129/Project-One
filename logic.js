@@ -41,34 +41,41 @@ $(document).ready(function() {
     });
 
   // WEATHER LOGIC
-var userCity = $("#cityInput").val();
-
-var APIKey = "4215e0176d12264a5f7d201c6130c2f9";
-
-$("#submitButton").on("click", function(event) {
-  event.preventDefault();
-  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&units=imperial&appid=" + APIKey;
- 
- var userCity = $("#cityInput").val();
- console.log(userCity);
-
- $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-
-.then(function(response) {
-    console.log(response);
+    $("#search").on("click", function(event) {
+    event.preventDefault();
+  
+  var currentDay = $("#currentDay").text(moment().format("dddd, MMM Do"));
+  
+  var userCity = $("#cityInput").val();
+  
+  var APIKey = "4215e0176d12264a5f7d201c6130c2f9";
+  
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&units=imperial&appid=" + APIKey;
     console.log(queryURL);
-    $("#temp1").append(response.main.temp);
-    $("#description1").append(response.clouds.all);
-    $("#precip1").append(response.main.humidity);
-    $("#wind1").append(response.wind.speed);
-
-
-});
-}); // END WEATHER LOGIC
-
+   
+   var userCity = $("#cityInput").val();
+   console.log(userCity);
+  
+   $.ajax({
+        url: queryURL,
+        method: "GET",
+      })
+  
+  .then(function(response) {
+      console.log(response);
+      console.log(queryURL);
+      $("#temp1").text(response.main.temp + " F");
+      $("#description1").text(response.clouds.all + " %");
+      // debugger;
+      // $("#precip1").text(response.rain["3h"]);
+      $("#wind1").text(response.wind.speed + " mph");
+  
+  if (response.weather[0].icon === "10n") {
+    $("#weatherImage").append("assets/images/weather_icons/02n.png");
+  };
+  });
+  });
+// END WEATHER LOGIC
 
 
 
