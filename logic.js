@@ -36,8 +36,8 @@ $(document).ready(function() {
     
   	$("#boardText").append(
       "<td id='jobDisplay'>" + childSnapshot.val().job + 
-      "<td id='locationDisplay'>" + childSnapshot.val().location +
-    )
+      "<td id='locationDisplay'>" + childSnapshot.val().location + "");
+    
     });
 
   // WEATHER LOGIC
