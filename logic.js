@@ -15,6 +15,31 @@ $(document).ready(function() {
       var database = firebase.database();
 
 
+//Button collects and stores user input      
+      $(".submitInput").on("click", function (event) {
+
+        var jobInput = $("#jobInput").val().trim();
+
+        var locationInput = $("#locationInput").val().trim();
+
+        	//Creates object for pushing input data
+					database.ref().push({
+						job: jobInput,
+            location: locationInput,
+
+          });
+            
+          //Firebase watcher 
+	database.ref().on("child_added", function (childSnapshot) {
+		var job = childSnapshot.val().job;
+    var location = childSnapshot.val().location;
+    
+  	$("#boardText").append(
+      "<td id='jobDisplay'>" + childSnapshot.val().job + 
+      "<td id='locationDisplay'>" + childSnapshot.val().location + "");
+    
+    });
+
   // WEATHER LOGIC
 var userCity = $("#cityInput").val();
 
