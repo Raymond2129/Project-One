@@ -99,18 +99,18 @@ $("#search").on("click", function () {
           var dataEmpty = results.SearchResult.SearchResultCount;
           //console.log(dataEmpty);
           //console.log(dataResults.length);
-          for (var i = 0; i < dataResults.length; i++) {
-
+          
             if (dataResults.length === 0) {
 
               var newDiv1 = $("<div>");
               newDiv1.addClass("job-search-empty");
-              var emptyJob = $("<div>").text("No Results. Please try a different Job Title or Location.");
+              var emptyJob = $("<div>").text("No Results found. Please try a different Job Title or Location.");
               //console.log("text: " + emptyJob);
               newDiv1.append(emptyJob);
               $("#jobPanel").prepend(newDiv1);
 
-            } else {
+            } else { for (var i = 0; i < dataResults.length; i++) {
+
               console.log(dataResults.length);
               var newDiv = $("<div>");
               newDiv.addClass("job-search");
