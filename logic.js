@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
-
+$("#resultsHeader").hide();
+$('#jobPanel').hide();
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyAtApx4q55Rk5X10_Db7bpzMTQKdlBZq5E",
