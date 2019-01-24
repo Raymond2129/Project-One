@@ -39,7 +39,7 @@ $("#search").on("click", function (event) {
   //Firebase watcher 
   database.ref().on("child_added", function (childSnapshot) {
     var jobInput = childSnapshot.val().job;
-    var jobLocation = childSnapshot.val().location;
+    var locationInput = childSnapshot.val().location;
 
   // Create the new row
   var newRow = $("<tr>").append(
