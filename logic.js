@@ -3,6 +3,7 @@ $(document).ready(function () {
 $("#resultsHeader").hide();
 $('#jobPanel').hide();
    $("#weatherCard").hide();
+//Begin Firebase Logic
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyAtApx4q55Rk5X10_Db7bpzMTQKdlBZq5E",
@@ -17,33 +18,41 @@ $('#jobPanel').hide();
 
   var database = firebase.database();
 
+//Button collects and stores user input      
+$("#search").on("click", function (event) {
+    
+  var jobInput = $("#job-input").val().trim();
 
-  //Button collects and stores user input      
-  $("#search").on("click", function (event) {
+  var locationInput = $("#location-input").val().trim();
 
-    var jobInput = $("#job-input").val().trim();
+  //Creates object for pushing input data
 
-    var locationInput = $("#location-input").val().trim();
+ var newSearch = {
+    job: jobInput,
+    location: locationInput,
+  };
 
-    //Creates object for pushing input data
-    database.ref().push({
-      job: jobInput,
-      location: locationInput,
+  //Uploads data to database
+  database.ref().push(newSearch); 
+    
 
-    });
+  //Firebase watcher 
+  database.ref().on("child_added", function (childSnapshot) {
+    var jobInput = childSnapshot.val().job;
+    var jobLocation = childSnapshot.val().location;
 
-    //Firebase watcher 
-    database.ref().on("child_added", function (childSnapshot) {
-      var job = childSnapshot.val().job;
-      var location = childSnapshot.val().location;
+  // Create the new row
+  var newRow = $("<tr>").append(
+  $("<td>").text(jobInput),
+  $("<td>").text(locationInput),
+  );
 
-      $("#boardText").append(
-        "<td id='jobDisplay'>" + childSnapshot.val().job +
-        "<td id='locationDisplay'>" + childSnapshot.val().location + "");
-
-    });
+// Append the new row to the table
+$("#search-table > tbody").append(newRow);
+});
   });
 });
+
 
 $("#search").on("click", function () {
       event.preventDefault();
