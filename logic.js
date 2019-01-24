@@ -16,11 +16,11 @@ $(document).ready(function () {
 
 
   //Button collects and stores user input      
-  $(".submitInput").on("click", function (event) {
+  $("#search").on("click", function (event) {
 
-    var jobInput = $("#jobInput").val().trim();
+    var jobInput = $("#job-input").val().trim();
 
-    var locationInput = $("#locationInput").val().trim();
+    var locationInput = $("#location-input").val().trim();
 
     //Creates object for pushing input data
     database.ref().push({
