@@ -130,6 +130,8 @@ $("#search").on("click", function () {
               var hardLine = $("<hr>");
               newDiv.append(hardLine);
               $("#jobPanel").prepend(newDiv);
+              $("#jobPanel").show();
+              $("#resultsHeader").show();
 
             }
           }
@@ -163,5 +165,8 @@ $("#search").on("click", function () {
                 $("#weatherCard").show();
 
               });
+              $("#clear").on("click", function(event){
+                location.reload();
             });
+          });
       });
