@@ -139,10 +139,11 @@ $("#search").on("click", function () {
               var hardLine = $("<hr>");
               newDiv.append(hardLine);
               $("#jobPanel").prepend(newDiv);
+
+
+            }             
               $("#jobPanel").show();
               $("#resultsHeader").show();
-
-            }
           }
 
           // WEATHER CODE
