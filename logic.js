@@ -21,9 +21,9 @@ $('#jobPanel').hide();
 //Button collects and stores user input      
 $("#search").on("click", function (event) {
     
-  var jobInput = $("#job-input").val().trim();
+  var jobInput = $("#job-input").val().trim().toUpperCase();
 
-  var locationInput = $("#location-input").val().trim();
+  var locationInput = $("#location-input").val().trim().toUpperCase();
 
   //Creates object for pushing input data
 
@@ -43,8 +43,9 @@ $("#search").on("click", function (event) {
 
   // Create the new row
   var newRow = $("<tr>").append(
-  $("<td>").text(jobInput),
-  $("<td>").text(locationInput),
+  $("<td class='white-text'>").text(jobInput),
+  $("<td class='white-text'>").text(locationInput),
+
   );
 
 // Append the new row to the table
