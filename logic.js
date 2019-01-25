@@ -53,7 +53,7 @@ $("#search-table > tbody").append(newRow);
   });
 });
 
-
+//start of USAJobs API
 $("#search").on("click", function () {
       event.preventDefault();
 
@@ -70,10 +70,6 @@ $("#search").on("click", function () {
 
       var queryURL = "https://data.usajobs.gov/api/search?Keyword=" + jobStr + "&LocationName=" + jobLocation + "";
       //console.log(queryURL);
-
-      //var host = 'data.usajobs.gov';
-
-
 
       var host = 'data.usajobs.gov';
       var userAgent = 'raymond2129@gmail.com';
@@ -142,10 +138,10 @@ $("#search").on("click", function () {
 
 
             }             
+          }
               $("#jobPanel").show();
               $("#resultsHeader").show();
-          }
-
+              //End of USAJobs API
           // WEATHER CODE
 
           var userCity = $("#location-input").val().trim();
